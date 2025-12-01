@@ -344,27 +344,41 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - **Selenium** for web automation capabilities
 - **Bootstrap** for the responsive UI components
 
-## 📱 Apple App Store Deployment
+## 🚀 Deployment
+
+### Telegram Bot & Backend (Render)
+
+📖 **[Deployment Guide](docs/DEPLOY.md)** - Deploy to Render in 3 simple steps
+
+**Cost:** Free tier available, or $14/month for always-on services.
+
+### Mobile App (Apple App Store)
 
 To deploy the mobile app to the Apple App Store:
 
-### Prerequisites
+**Prerequisites:**
 - **Apple Developer Account** ($99/year)
 - **macOS** with Xcode installed
 - **React Native CLI** and development environment
 
-### Steps
+**Steps:**
 1. **Set up React Native project** using the files in `mobile-app/` directory
 2. **Configure iOS settings** following `mobile-app/ios-config.md`
 3. **Set up Apple Push Notifications** with APNs certificates
 4. **Test on iOS Simulator** and physical devices
 5. **Submit to App Store Connect** for review
 
-### Key Features for App Store
-- **Automatic rain alerts** during commute hours
-- **Background processing** for weather checks
-- **Push notifications** with rain/clear weather alerts
-- **Modern iOS design** following Apple guidelines
+**Key Features:**
+- Automatic rain alerts during commute hours
+- Background processing for weather checks
+- Push notifications with rain/clear weather alerts
+- Modern iOS design following Apple guidelines
+
+### Web App (Netlify/Vercel)
+
+Deploy the web interface using the `motorain-web/` React app:
+- See `motorain-web/README.md` for deployment instructions
+- Supports Netlify, Vercel, or any static hosting
 
 ## 📞 Support
 
