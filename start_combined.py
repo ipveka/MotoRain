@@ -25,8 +25,8 @@ def start_bot():
     print("Waiting for backend to initialize...")
     time.sleep(10)  # Give backend time to start
     print("Starting telegram bot...")
-    os.chdir('..')
-    subprocess.run([sys.executable, '-m', 'telegram_bot.bot'])
+    os.chdir('telegram_bot')
+    subprocess.run([sys.executable, 'bot.py'])
 
 if __name__ == '__main__':
     # Start backend in a thread
