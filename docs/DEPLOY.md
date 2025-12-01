@@ -17,7 +17,7 @@ Deploy MotoRain bot to [Render.com](https://render.com) - **both backend and bot
 3. Connect your GitHub repository
 4. Configure:
    - **Name:** `motorain-bot`
-   - **Build Command:** `pip install -r backend/requirements.txt && pip install -r telegram_bot/requirements.txt`
+   - **Build Command:** `apt-get update && apt-get install -y chromium chromium-driver && pip install -r backend/requirements.txt && pip install -r telegram_bot/requirements.txt`
    - **Start Command:** `python start_combined.py`
    - **Plan:** Free
 5. Click **"Environment"** in sidebar

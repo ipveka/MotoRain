@@ -8,25 +8,29 @@ import sys
 import threading
 import time
 import subprocess
+from pathlib import Path
+
+# Get the project root directory
+PROJECT_ROOT = Path(__file__).parent.absolute()
 
 def start_backend():
     """Start the backend server in a thread."""
     print("Starting backend server...")
-    os.chdir('backend')
+    backend_dir = PROJECT_ROOT / 'backend'
     subprocess.run([
         sys.executable, '-m', 'uvicorn',
         'app_mobile:app',
         '--host', '0.0.0.0',
         '--port', os.environ.get('PORT', '8001')
-    ])
+    ], cwd=str(backend_dir))
 
 def start_bot():
     """Start the telegram bot."""
     print("Waiting for backend to initialize...")
     time.sleep(10)  # Give backend time to start
     print("Starting telegram bot...")
-    os.chdir('telegram_bot')
-    subprocess.run([sys.executable, 'bot.py'])
+    bot_dir = PROJECT_ROOT / 'telegram_bot'
+    subprocess.run([sys.executable, 'bot.py'], cwd=str(bot_dir))
 
 if __name__ == '__main__':
     # Start backend in a thread
